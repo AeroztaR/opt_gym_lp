@@ -19,7 +19,7 @@ h1 {
     font-weight: 300;
     color: #2BA2DF;
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .promo {
@@ -66,3 +66,97 @@ h1 {
 .content {
     z-index: 10;
 }
+
+/* animate button */
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.btn:hover, .btn:active {
+    box-shadow: 0 0 10px #2BA2DF, 0 0 40px #2BA2DF, 0 0 80px #2BA2DF;
+    background-color: #2BA2DF;
+    transition-delay: 1s;
+    color: #fff;
+}
+
+.btn__line {
+    position: absolute;
+    display: block;
+}
+
+.btn__line--top,
+.btn__line--bottom {
+    width: 100%;
+    height: 2px;
+}
+
+.btn__line--right,
+.btn__line--left {
+    width: 2px;
+    height: 100%;
+}
+
+.btn:hover .btn__line--top,
+.btn:active .btn__line--top,
+.btn:hover .btn__line--bottom,
+.btn:active .btn__line--bottom {
+    transition: 1s;
+    transition-delay: .25s;
+}
+
+
+.btn__line--top {
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, #2BA2DF);
+}
+
+.btn:hover .btn__line--top,
+.btn:active .btn__line--top {
+    left: 100%;
+}
+
+
+.btn__line--bottom {
+    bottom: 0;
+    right: -100%;
+    background: linear-gradient(270deg, transparent, #2BA2DF);
+}
+
+.btn:hover .btn__line--bottom,
+.btn:active .btn__line--bottom {
+    right: 100%;
+}
+
+.btn__line--left {
+    bottom: -100%;
+    left: 0;
+    background: linear-gradient(0deg, transparent, #2BA2DF);
+}
+
+.btn:hover .btn__line--left,
+.btn:active .btn__line--left {
+    bottom: 100%;
+    transition: 1s;
+}
+
+.btn__line--right {
+    top: -100%;
+    right: 0;
+    background: linear-gradient(180deg, transparent, #2BA2DF);
+}
+
+.btn:hover .btn__line--right,
+.btn:active .btn__line--right {
+    top: 100%;
+    transition: 1s;
+}
+
+/* animate button */
