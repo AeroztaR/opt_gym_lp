@@ -1,3 +1,9 @@
+:root {
+    --main-content-color: #2BA2DF;
+    --main-bg-color: #18191A;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,13 +17,13 @@ body {
 
 a {
     text-decoration: none;
-    color: #2BA2DF;
+    color: var(--main-content-color);
 }
 
 h1 {
     font-size: 60px;
     font-weight: 300;
-    color: #2BA2DF;
+    color: var(--main-content-color);
     line-height: 1.2;
     margin-bottom: 2rem;
 }
@@ -40,7 +46,7 @@ h1 {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #18191A url('/img/cover.jpg') no-repeat center center/cover;
+    background: var(--main-bg-color) url('/img/cover.jpg') no-repeat center center/cover;
 }
 
 .video-container video {
@@ -70,6 +76,12 @@ h1 {
 /* animate button */
 
 .btn {
+    --btn-line-color: #2BA2DF;
+    --btn-shadow-color: #2BA2DF;
+    --btn-bg-color: #2BA2DF;
+}
+
+.btn {
     position: relative;
     display: inline-block;
     padding: 1rem 2rem;
@@ -80,8 +92,8 @@ h1 {
 }
 
 .btn:hover, .btn:active {
-    box-shadow: 0 0 10px #2BA2DF, 0 0 40px #2BA2DF, 0 0 80px #2BA2DF;
-    background-color: #2BA2DF;
+    box-shadow: 0 0 10px var(--btn-shadow-color), 0 0 40px var(--btn-shadow-color), 0 0 80px var(--btn-shadow-color);
+    background-color: var(--btn-bg-color);
     transition-delay: 1s;
     color: #fff;
 }
@@ -115,7 +127,7 @@ h1 {
 .btn__line--top {
     top: 0;
     left: -100%;
-    background: linear-gradient(90deg, transparent, #2BA2DF);
+    background: linear-gradient(90deg, transparent, var(--btn-line-color));
 }
 
 .btn:hover .btn__line--top,
@@ -127,7 +139,7 @@ h1 {
 .btn__line--bottom {
     bottom: 0;
     right: -100%;
-    background: linear-gradient(270deg, transparent, #2BA2DF);
+    background: linear-gradient(270deg, transparent, var(--btn-line-color));
 }
 
 .btn:hover .btn__line--bottom,
@@ -138,7 +150,7 @@ h1 {
 .btn__line--left {
     bottom: -100%;
     left: 0;
-    background: linear-gradient(0deg, transparent, #2BA2DF);
+    background: linear-gradient(0deg, transparent, var(--btn-line-color));
 }
 
 .btn:hover .btn__line--left,
@@ -150,7 +162,7 @@ h1 {
 .btn__line--right {
     top: -100%;
     right: 0;
-    background: linear-gradient(180deg, transparent, #2BA2DF);
+    background: linear-gradient(180deg, transparent, var(--btn-line-color));
 }
 
 .btn:hover .btn__line--right,
